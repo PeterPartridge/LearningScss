@@ -1,0 +1,6 @@
+﻿$border-standard:0.2em;
+
+@mixin standard-border($size, $color)
+ {
+  border: $size solid $color;
+}

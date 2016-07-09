@@ -1,0 +1,62 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Noto+Serif);
+@import "color.scss";
+@import "border.scss";
+@import "font.scss";
+@import "containers.scss";
+
+
+*
+{
+  box-sizing:border-box;
+}
+
+#divOne {
+  background-color: $basic-background-color;
+  @include standard-border($border-color, $border-standard);
+  p {
+    background-color: $secondary-background-color;
+    @include standard-font();
+  }
+}
+ 
+h3 {
+  @include standard-font();
+  text-decoration: underline;
+}
+ 
+#leftMedium {
+  background-color: $basic-background-color;
+  float: left;
+  width: $medium-container;
+  @include standard-font();
+  padding-bottom:4%;
+  @include standard-border(.1em,#00ff22);
+  ol {
+    background-color: $secondary-background-color;
+    :nth-child(even){
+      color: $basic-background-color;
+    }
+    li {
+     
+    }
+  }
+}
+ 
+#rightMedium {
+  width: $medium-container;
+  @include standard-font;
+  background-color:$basic-background-color;
+    padding-bottom:4%;
+  float: right;
+  @include standard-border(.1em,#569800);
+  ul {
+    :nth-child(odd)
+    {   
+      color:$basic-background-color;
+    }
+    background-color: $secondary-background-color;
+    li {
+    
+    }
+  }
+}
